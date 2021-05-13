@@ -3,15 +3,12 @@ import random
 
 from players import HumanPlayer, ComputerPlayer, Dealer
 
-
 class Game:
     """Object that plays the game of blackjack!
-
     :param player_count: number of human players you want at the table
     :type player_count: int, defualts to 1
     :param bot_count: number of bots you want at the table
     :type bot_count: int, defualts to 1
-
     :ivar deck: calls the _create_deck method
     :type list of card objects
     :ivar player_list: calls the _create_players method

@@ -75,6 +75,10 @@ class ComputerPlayer(Player):
     
     @property
     def type(self):
+        """The type string
+        :return: 'Bot'
+        :rtype: string
+        """
         return 'Bot'
     
     def play_hand(self):
@@ -107,6 +111,10 @@ class Dealer(Player):
 
     @property
     def type(self):
+        """The type string
+        :return: 'Dealer'
+        :rtype: string
+        """
         return 'Dealer'
     
     def play_hand(self):
@@ -147,6 +155,10 @@ class HumanPlayer(Player):
 
     @property
     def type(self):
+        """The type string
+        :return: 'Player'
+        :rtype: string
+        """
         return 'Player'
 
     def play_hand(self):

@@ -10,6 +10,9 @@ Welcome to FinnsCasino's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   blackjack
+   players
+
 Indices and tables
 ==================
 

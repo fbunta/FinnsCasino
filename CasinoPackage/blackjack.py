@@ -5,19 +5,34 @@ from players import HumanPlayer, ComputerPlayer, Dealer
 
 class Game:
     """Object that plays the game of blackjack!
+
     :param player_count: number of human players you want at the table
     :type player_count: int, defualts to 1
     :param bot_count: number of bots you want at the table
     :type bot_count: int, defualts to 1
-    :ivar deck: calls the _create_deck method
-    :type list of card objects
-    :ivar player_list: calls the _create_players method
-    :type list of :class:`player.Player` implementations
     """
     def __init__(self, player_count=1, bot_count=1):
-        self.deck = self._create_deck()
-        self.player_list = self._create_players(player_count, bot_count)
+        self._deck = self._create_deck()
+        self._player_list = self._create_players(player_count, bot_count)
         self._dealer = Dealer(self)
+    
+    @property
+    def deck(self):
+        """Set by the the _create_deck method
+
+        :return: deck instance member variable 
+        :rtype: list of card object
+        """
+        return self._deck
+
+    @property
+    def player_list(self):
+        """Set by the _create_players method
+
+        :return: player_list instance member variable 
+        :type list of :class:`player.Player` implementations
+        """
+        return self._player_list
     
     def _create_players(self, player_count, bot_count):
         """Called by c'tor to create the player list and assign it to player_list attribute
